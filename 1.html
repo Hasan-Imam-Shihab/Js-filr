@@ -1,0 +1,59 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <h1> A simple Calculator </h1>
+       <form name = "myform" onsubmit="return false">  
+        <input type="number" name = "n1" placeholder = "number1" required/>
+        <input type="number" name = "n2" placeholder = "number2" required/>
+        <br>
+        <br>
+        <button onclick = "add()"> add(+) </button>
+        <button onclick = "sub()"> sub(-) </button>
+        <button onclick = "mul()"> mul(*) </button>
+        <button onclick = "div()"> div(/) </button><br>
+        <br>
+        Result: <input type="text"  name= "res" required>
+       </form>
+    <script>
+        function add(){
+           // document.write("kdm");
+            var a = document.forms["myform"]["n1"].value;
+            var b = document.forms["myform"]["n2"].value;
+            
+
+            var r = Number(a) + Number(b);
+            
+            document.forms["myform"]["res"].value= r;
+        }
+        function sub(){
+            var a = document.forms["myform"]["n1"].value;
+            var b = document.forms["myform"]["n2"].value;
+            
+
+            var r = Number(a) - Number(b);
+            
+            document.forms["myform"]["res"].value= r;
+        }
+        function mul(){
+            var a = document.forms["myform"]["n1"].value;
+            var b = document.forms["myform"]["n2"].value;
+            
+
+            var r = Number(a) * Number(b);
+            
+            document.forms["myform"]["res"].value= r;
+        }
+        function div(){
+            var a = document.forms["myform"]["n1"].value;
+            var b = document.forms["myform"]["n2"].value;
+            
+
+            var r = Number(a) / Number(b);
+            
+            document.forms["myform"]["res"].value= r;
+        }
+    </script>
+</body>
+
+</html>
